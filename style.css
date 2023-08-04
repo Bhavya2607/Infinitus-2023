@@ -85,4 +85,8 @@ h2 img{
         z-index: 4;
         overflow-x: hidden;
     }
+    .container{
+        width: 100vw;
+        overflow-x: hidden;
+    }
 }
