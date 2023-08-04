@@ -1,0 +1,82 @@
+body{
+    background-color: burlywood;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+}
+
+#video {
+    z-index: -4;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+}
+
+h2 {
+    font-size: 8em;
+    font-weight: 900;
+    position: relative;
+    width: 100%;
+}
+
+h2 img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+ 
+}
+
+.container-1{
+    height: 10000px;
+    background-color: black;
+    position: relative;
+    color: aqua;
+}
+
+.button-scroll{
+    position: fixed;
+
+}
+
+.head{
+    color:aqua;
+    z-index: 5;
+    position: fixed;
+}
+
+
+@media (max-width: 600px){
+    body{
+        overflow-x: hidden;
+    }
+    #video{
+        height: 100vh;
+        width: auto;
+        overflow-x: hidden;
+    }
+
+    h2 img{
+        top: 0;
+        margin-top: -250px;
+        width: 130%;
+        margin-left: -20%;
+    }
+
+    .container-1{
+        margin-top: -300px;
+        z-index: 4;
+        overflow-x: hidden;
+    }
+}
