@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400&family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400&family=Cinzel&family=Quicksand:wght@300&display=swap');
 body{
     background-color: burlywood;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    width: 100%;
+    
 }
 
 #video {
@@ -43,11 +47,67 @@ h2 img{
 
 .container-1{
     margin-top: 200px;
-    height: 10000px;
+    height: 500px;
     background-color: black;
     position: relative;
     color: aqua;
 }
+
+.theme{
+    height: 500px;
+    background-color: black;
+    position: relative;
+    width: 100%;
+}
+.text{
+    font-size: 5rem;
+    color: #fff;
+    top: 30%;
+    position: relative;
+    left: 14%;
+    font-family: 'Quicksand', serif;
+    font-weight: 700;
+}
+
+.img{
+    position: absolute;
+    background-color: aquamarine;
+    border-radius: 15px;
+}
+
+.img1{
+    top: 42%;
+    left: 0%;
+    width: 20vw;
+    height: 30vh;
+    transform: rotate(-5deg) translate(-50%, 0%);
+}
+
+.img2{
+    top: -5%;
+    left: 30%;
+    width: 20vw;
+    height: 20vh;
+    transform: rotate(-2deg) translate(-50%, 0%);
+}
+
+.img3{
+    top: 30%;
+    left: 65%;
+    width: 17%;
+    height: 18%;
+    transform: rotate(2deg) translate(-50%, 0%);
+}
+
+.img4{
+    top: 63%;
+    left: 95%;
+    width: 20%;
+    height: 30%;
+
+}
+
+
 
 .button-scroll{
     position: absolute;
@@ -87,5 +147,8 @@ h2 img{
     .container{
         width: 100vw;
         overflow-x: hidden;
+    }
+    .img{
+        display: none;
     }
 }
