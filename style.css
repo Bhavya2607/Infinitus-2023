@@ -548,6 +548,7 @@ h2 img{
 @media (max-width: 600px){
     body{
         overflow-x: hidden;
+        width: 100vw;
     }
     main{
       height: 100%;
