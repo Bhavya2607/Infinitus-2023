@@ -2,7 +2,7 @@ const { innerHeight } = window;
 
 // zoom-out
 gsap.from("#main h2 img", {
-    scale: 170, stagger: .20, duration: 10,
+    scale: 200, stagger: .20, duration: 5,
     scrollTrigger: {
         trigger: "#main",
         pin: true,
@@ -41,50 +41,29 @@ const handleLoveClick = () => {
   });
 }
 
-const handleHateClick = () => {
-  const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : groups.length - 1;
-  
-  const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
-        nextGroup = document.querySelector(`[data-index="${nextIndex}"]`);
-  
-  currentGroup.dataset.status = "before";
-  
-  nextGroup.dataset.status = "becoming-active-from-after";
-  
+let index = 0,
+    interval = 1000;
+
+const rand = (min, max) => 
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
+const animate = star => {
+  star.style.setProperty("--star-left", `${rand(-10, 100)}%`);
+  star.style.setProperty("--star-top", `${rand(-40, 80)}%`);
+
+  star.style.animation = "none";
+  star.offsetHeight;
+  star.style.animation = "";
+}
+
+for(const star of document.getElementsByClassName("magic-star")) {
   setTimeout(() => {
-    nextGroup.dataset.status = "active";
-    activeIndex = nextIndex;
-  });
+    animate(star);
+    
+    setInterval(() => animate(star), 1000);
+  }, index++ * (interval / 3))
 }
 
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-let interval = null;
-
-document.querySelector("h1").onmouseover = event => {  
-  let iteration = 0;
-  
-  clearInterval(interval);
-  
-  interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
-      .split("")
-      .map((letter, index) => {
-        if(index < iteration) {
-          return event.target.dataset.value[index];
-        }
-      
-        return letters[Math.floor(Math.random() * 26)]
-      })
-      .join("");
-    
-    if(iteration >= event.target.dataset.value.length){ 
-      clearInterval(interval);
-    }
-    
-    iteration += 1 / 3;
-  }, 30);
-}
 
 const trailer = document.getElementById("trailer");
 
@@ -128,12 +107,14 @@ window.onmousemove = e => {
 
 
 
-ScrollReveal().reveal('.text', { delay: 200, reset: true});
-ScrollReveal().reveal('.img', { delay: 400, reset: true});
-ScrollReveal().reveal('.img', { delay: 400, reset: true});
-ScrollReveal().reveal('.img', { delay: 400, reset: true});
-ScrollReveal().reveal('.img', { delay: 400, reset: true});
+ScrollReveal().reveal('.theme-h', { delay: 200, reset: true});
+ScrollReveal().reveal('.theme-t', { delay: 200, reset: true});
+ScrollReveal().reveal('.img1', { delay: 400, reset: true});
+ScrollReveal().reveal('.img2', { delay: 400, reset: true});
+ScrollReveal().reveal('.img3', { delay: 400, reset: true});
+ScrollReveal().reveal('.img4', { delay: 400, reset: true});
 ScrollReveal().reveal('.img-mobile', { delay: 600, reset: true});
-ScrollReveal().reveal('.img-mobile', { delay: 600, reset: true});
+ScrollReveal().reveal('.prizepool-h', { delay: 200, reset: true});
+ScrollReveal().reveal('.prizepool-t', { delay: 200, reset: true});
 ScrollReveal().reveal('.card-swiper', { delay: 200, reset: true});
 
