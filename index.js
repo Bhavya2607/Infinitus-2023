@@ -4,7 +4,7 @@ const { innerHeight } = window;
 gsap.from("#main h2 img", {
     scale: 200, stagger: .20, duration: 5,
     scrollTrigger: {
-        trigger: "#main",
+        trigger: ".container",
         pin: true,
         end: `+=${innerHeight * 1.3}`,
         scrub: 0,
