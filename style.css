@@ -549,6 +549,10 @@ h2 img{
     body{
         overflow-x: hidden;
     }
+    main{
+      height: 100vh;
+      overflow: hidden;
+    }
     #video{
         height: 100vh;
         width: auto;
@@ -559,9 +563,7 @@ h2 img{
       margin-top: -150px;
         top: 0;
         width: 130%;
-        height: auto;
         margin-left: -18%;
-        position: sticky;
     }
 
     .container-1{
