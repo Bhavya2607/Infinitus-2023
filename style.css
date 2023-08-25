@@ -550,7 +550,8 @@ h2 img{
         overflow-x: hidden;
     }
     main{
-      height: 100vh;
+      height: 100%;
+      width: 100%;
       overflow: hidden;
     }
     #video{
@@ -572,8 +573,12 @@ h2 img{
         z-index: 4;
         overflow-x: hidden;
     }
+
     .container{
+      max-height: 600px;
         overflow: hidden;
+        height: 100vh;
+        width: 100%;
     }
     .img{
         display: none;
