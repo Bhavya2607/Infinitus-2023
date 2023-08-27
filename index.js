@@ -12,7 +12,6 @@ gsap.from("#main h2 img", {
 });
 
 document.addEventListener("mousemove", function(details){
-    console.log(details)
     document.querySelectorAll(".img").forEach((elem) =>{
         const position = elem.getAttribute("value");
         var x = (window.innerWidth + details.clientX * position)/50;
@@ -21,25 +20,34 @@ document.addEventListener("mousemove", function(details){
     })
 })
 
-let activeIndex = 0;
+document.addEventListener("mousemove", function(detailss){
+  document.querySelectorAll(".prizepool").forEach((eleme) =>{
+      const positionn = eleme.getAttribute("value");
+      var a = (window.innerWidth - detailss.clientX * positionn)/40;
+      var b = (window.innerHeight - detailss.clientY * positionn)/40;
+      eleme.style.transform = `translateX(${a}px) translateY(${b}px)`
+  })
+})
 
-const groups = document.getElementsByClassName("card-group");
+// let activeIndex = 0;
 
-const handleLoveClick = () => {
-  const nextIndex = activeIndex + 1 <= groups.length - 1 ? activeIndex + 1 : 0;
+// const groups = document.getElementsByClassName("card-group");
+
+// const handleLoveClick = () => {
+//   const nextIndex = activeIndex + 1 <= groups.length - 1 ? activeIndex + 1 : 0;
   
-  const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
-        nextGroup = document.querySelector(`[data-index="${nextIndex}"]`);
+//   const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
+//         nextGroup = document.querySelector(`[data-index="${nextIndex}"]`);
         
-  currentGroup.dataset.status = "after";
+//   currentGroup.dataset.status = "after";
   
-  nextGroup.dataset.status = "becoming-active-from-before";
+//   nextGroup.dataset.status = "becoming-active-from-before";
   
-  setTimeout(() => {
-    nextGroup.dataset.status = "active";
-    activeIndex = nextIndex;
-  });
-}
+//   setTimeout(() => {
+//     nextGroup.dataset.status = "active";
+//     activeIndex = nextIndex;
+//   });
+// }
 
 let index = 0,
     interval = 1000;
@@ -105,6 +113,42 @@ window.onmousemove = e => {
   }
 }
 
+
+var tl = gsap.timeline({scrollTrigger:{
+  trigger:"#sponsor",
+  // markers:true,
+  start:"38% 50%",
+  end:"100% 50%",
+  scrub:2,
+  pin:true
+}});
+tl
+.to(".sponsor-text",{
+  top: "-7%",
+},'a')
+.to("#s-card-one",{
+  top: "35%",
+},'a')
+.to("#s-card-two",{
+  top: "130%"
+},'a')
+.to("#s-card-two",{
+  top: "42%"
+},'b')
+.to("#s-card-one",{
+  width: "65%",
+  height: "65vh"
+},'b')
+.to("#s-card-three",{
+  top: "130%"
+}, 'b')
+.to("#s-card-three",{
+  top: "50%"
+}, 'c')
+.to("#s-card-two",{
+  width: "70%",
+  height: "70vh"
+},'c')
 
 
 ScrollReveal().reveal('.theme-h', { delay: 200, reset: true});

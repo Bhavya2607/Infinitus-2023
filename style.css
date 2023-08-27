@@ -122,7 +122,7 @@ h2 img{
 }
 .theme-h{
 
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
     position: relative;
     font-family: 'Quicksand', serif;
@@ -149,8 +149,6 @@ h2 img{
     color: #fff;
     position: relative;
     margin-top: -1%;
-    font-family: 'Gothic A1', sans-serif;
-    font-weight: bolder;
     text-align: center;
   z-index: 3;
 }
@@ -217,7 +215,7 @@ h2 img{
     position: fixed;
 }
 
-.prizepool{
+/* .prizepool{
     background-color: black;
     width: 100%;
     height: 1000px;
@@ -229,7 +227,7 @@ h2 img{
 }
 .prizepool-h{
 
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
     position: relative;
     font-family: 'Quicksand', serif;
@@ -251,19 +249,25 @@ h2 img{
 }
 
 .prizepool-t{
-  width: 100%;
-    font-size: 5rem;
+    font-size: 4rem;
     color: #fff;
     position: relative;
-    margin-top: -5%;
-    font-family: 'Gothic A1', sans-serif;
-    font-weight: bolder;
+    margin-top: -4%;
     text-align: center;
-    line-height: 1.2;
     letter-spacing: 1px;
+    width: 100%;
   z-index: 3;
 }
 
+.prizepool-text{
+  position: absolute;
+  width: 100%;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
 :root {  
   --purple: rgb(123, 31, 162);
   --violet: rgb(103, 58, 183);
@@ -342,7 +346,7 @@ h2 img{
   white-space: nowrap;
 }
 
-.bg{
+/* .bg{
     width: 900px;
     height: 500px;
     filter: blur(100px);
@@ -353,8 +357,8 @@ h2 img{
     background-image: linear-gradient(to right top,#6c22bd,#8b25bb,#a52bb9,#bc34b7,#d040b5,#e645a5,#f55195,#ff6188,#ff796e,#ff965b,#f5b255,#e1cd60);
     position: relative;
     border-radius: 20px;
-}
-.card-swiper{
+} */
+/* .card-swiper{
     margin-top: -60%;
 
    }
@@ -542,8 +546,105 @@ h2 img{
   color: rgb(33, 150, 243);
   border-color: rgb(33, 150, 243);
   z-index: 4;
+} */
+
+#sponsor {
+  gap: 10vh;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 150vh;
 }
 
+.s-cards {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+}
+
+#s-card-one {
+  top: 130%;
+  background-image: url(6.webp);
+}
+
+#s-card-two {
+  top: 230%;
+  background-image: url(9.webp);
+}
+
+#s-card-three {
+  top: 250%;
+  background-image: url(6.webp);
+}
+
+.sponsor-text{
+  position: absolute;
+  width: 100%;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-h{
+
+  font-size: 2rem;
+  color: #fff;
+    position: relative;
+    font-family: 'Quicksand', serif;
+    font-weight: bolder;
+    background: radial-gradient(
+    hsl(100 100% 60%), 
+    hsl(200 100% 60%) 
+  ) fixed;
+  background: conic-gradient(
+    hsl(100 100% 60%), 
+    hsl(200 100% 60%), 
+    hsl(100 100% 60%) 
+  ) fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+}
+
+.sponsor-t{
+  width: 60%;
+    font-size: 4rem;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+.emoji-t{
+  width: 40%;
+    font-size: 2em;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+.emoji{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  transition: 0.5s;
+}
+
+.emoji-1{
+  gap: 40%;
+}
 
 @media (max-width: 600px){
     body{
@@ -562,7 +663,7 @@ h2 img{
     }
 
     h2 img{
-      margin-top: -150px;
+      margin-top: 0;
         top: 0;
         width: 130%;
         margin-left: -18%;
@@ -570,13 +671,13 @@ h2 img{
     }
 
     .container-1{
-        margin-top: -100px;
+        margin-top: -50px;
         z-index: 4;
         overflow-x: hidden;
     }
 
     .container{
-      max-height: 600px;
+      max-height: 100vh;
         overflow: hidden;
         height: 100vh;
         width: 100%;
@@ -596,14 +697,15 @@ h2 img{
         display: flex;
         height: 30vh;
     }
-    .prizepool-t{
+    /* .prizepool-t{
       font-size: 9vw;
-      margin-top: -11%;
     }
     .prizepool-h{
       font-size: 7vw;
+    } */
+    .prizepool{
+      margin-top: 20%;
     }
-
     .theme-t{
       font-size: 3.5rem;
     }
@@ -619,5 +721,17 @@ h2 img{
     #trailer{
       display: none;
     }
-
+    .sponsor-t{
+      font-size: 9vw;
+      width: 90%;
+    }
+    .emoji-2 img{
+      display: none;
+    }
+    .emoji-t{
+      width: 90%;
+    }
+    .emoji-1{
+      gap: 70%;
+    }
 }
