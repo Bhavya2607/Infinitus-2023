@@ -116,7 +116,7 @@ window.onmousemove = e => {
 
 var tl = gsap.timeline({scrollTrigger:{
   trigger:"#sponsor",
-  // markers:true,
+  //markers:true,
   start:"38% 50%",
   end:"100% 50%",
   scrub:2,
@@ -125,6 +125,7 @@ var tl = gsap.timeline({scrollTrigger:{
 tl
 .to(".sponsor-text",{
   top: "-7%",
+  scale: "1.3"
 },'a')
 .to("#s-card-one",{
   top: "35%",
@@ -149,6 +150,36 @@ tl
   width: "70%",
   height: "70vh"
 },'c')
+
+
+var ct = gsap.timeline({scrollTrigger:{
+  trigger:".container-5",
+  //markers:true,
+  start:"0% 60%",
+  end:"70% 80%",
+  scrub:1,
+  scrollspeed: 3,
+}});
+
+ct
+.to(".contact",{
+  scale: "1.7",
+},'a')
+
+var part7 = gsap.timeline({scrollTrigger:{
+  trigger: ".container-7",
+  start : "50% 90%",
+  end:"200% 90%",
+  scrub: true,
+  duration: 1,
+  // markers: true,
+}})
+part7.to(".strip-r",{
+  x: "-30vw",
+}, 'strip')
+part7.to(".strip-l",{
+  x: "30vw",
+}, 'strip')
 
 
 ScrollReveal().reveal('.theme-h', { delay: 200, reset: true});

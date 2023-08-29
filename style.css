@@ -2,6 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400&family=Cinzel&family=Gothic+A1:wght@300&family=Quicksand:wght@300&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400&family=Cinzel&family=Quicksand:wght@300&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400&family=Cinzel&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: FontOne;
+    src: url(61defec4a021d8c8284c11f0_AttilaSansUniform-Semibold.ttf);
+}
+
+@font-face {
+    font-family: FontTwo;
+    src: url(61defec4a021d87f024c11f9_domaine-display-regular-italic.ttf);
+}
+
+@font-face {
+    font-family: FontThree;
+    src: url(61defec4a021d8defb4c11f5_StabilGrotesk-Regular.ttf);
+}
+
 body{
     margin: 0;
     overflow-x: hidden;
@@ -570,16 +586,19 @@ h2 img{
 #s-card-one {
   top: 130%;
   background-image: url(6.webp);
+  border-radius: 20px;
 }
 
 #s-card-two {
   top: 230%;
   background-image: url(9.webp);
+  border-radius: 20px;
 }
 
 #s-card-three {
   top: 250%;
   background-image: url(6.webp);
+  border-radius: 20px;
 }
 
 .sponsor-text{
@@ -644,6 +663,97 @@ h2 img{
 
 .emoji-1{
   gap: 40%;
+}
+
+.container-5{
+  width: 100%;
+  height: 700px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact{
+  width: 50%;
+  height: 50%;
+  background-color: aqua;
+  border-radius: 20px;
+
+}
+
+.container-7{
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.strip{
+  width: 520%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+}
+
+.container-7 h1{
+  font-family: FontOne;
+  color: #fff;
+  font-size: 10vw;
+  line-height: 30px;
+}
+
+.container-7 h1 span{
+  color: transparent;
+  -webkit-text-stroke:1px #fff;
+}
+
+.container-7 .strip:nth-child(2n){
+  margin-left: -50vw;
+}
+
+.container-6{
+  margin-top: 100px;
+  height: 100vh;
+}
+.register-text{
+  position: relative;
+  width: 100%;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-h{
+
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+    position: relative;
+    font-family: 'Quicksand', serif;
+    font-weight: bolder;
+    background: radial-gradient(
+    hsl(100 100% 60%), 
+    hsl(200 100% 60%) 
+  ) fixed;
+  background: conic-gradient(
+    hsl(100 100% 60%), 
+    hsl(200 100% 60%), 
+    hsl(100 100% 60%) 
+  ) fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+}
+
+.register-t{
+  width: 60%;
+    font-size: 4rem;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 1px;
 }
 
 @media (max-width: 600px){
@@ -734,4 +844,10 @@ h2 img{
     .emoji-1{
       gap: 70%;
     }
+    .strip{
+      width: 500%;
+  } 
+  .container-7 h1{
+      font-size: 20vw;
+  }
 }
