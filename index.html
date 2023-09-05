@@ -15,18 +15,34 @@
       <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
    </head>
    <body>
-      <div class="head"> DPSG</div>
+      <div class="head"> 
+         <img src="long_logo_light.svg" height="110px" alt="" class="dpsg">
+
+         <input type="checkbox" name="" id="nav-toggler" class="fas fa-bars">    
+         <nav class="navbar">
+            <a href="index.html"  type="checkbox" class="fas" id="nav-close" data-text="home">home</a>
+            <a href="https://mydpsg-my.sharepoint.com/personal/itfest_mrd_dpsgs_org/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fitfest%5Fmrd%5Fdpsgs%5Forg%2FDocuments%2FINFINITUS%202023%20CREATIVE%2Epdf&parent=%2Fpersonal%2Fitfest%5Fmrd%5Fdpsgs%5Forg%2FDocuments&ga=1" type="checkbox" class="fas" target="_top"  id="nav-close" data-text="events">events</a>
+            <a href="https://forms.office.com/pages/responsepage.aspx?id=aW4sGeGjRUG-dCgMXqaGSqQgLKfTKZtPunSkDCxqqNVUOVBHREk5QkhOWFhKSlZXQlBFTkk5U1hRUi4u" id="nav-close" type="checkbox" class="fas" data-text="register">register</a>
+            <a href="https://dpsg-infinitus.github.io/Infinitus/" id="nav-close" type="checkbox" class="fas" data-text="infinitus-2022">infinitus-2022</a>
+            <div class="nav-icon">
+               <a href="https://www.instagram.com/dpsg.infinitus/"><i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i></a>
+               <a href="https://www.facebook.com/DelhiPublicSchoolGzbMR/"><i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i></a>
+            </div>
+            <div class="background-image"></div>
+         </nav>
+      </div>
       <div class="container pin-spacer">
          <div id="main">
             <video autoplay muted loop id="video">
                <source src="main_teaser.mp4">
             </video>
-            <div class="button-scroll">Scroll Down</div>
-            <h2><img src="Asset 35.png"></img></h2>
+            <div class="button-scroll" >Scroll Down</div>
+            <h2 class="entry-animation"><img src="Asset 35.png"></img></h2>
          </div>
       </div>
-      <div class="container-1"> VIDEO
+      <div class="container-1" id="video1"> VIDEO
       </div>
+      
       <div class="container-2">
          <div class="theme">
             <div class="text">
@@ -243,17 +259,80 @@
        <div class="container-6">
          <div class="register-text">
             <div class="register-h">REGISTER!</div>
-            <div class="register-t">Elevate Your Experience: Register Now and Ignite Your Journey!</div>
+            <div class="register">
+               <div class="register-t">Elevate Your Experience: Register Now and Ignite Your Journey!</div>
+               <div class="vl"></div>
+               <div class="qr-box">
+                  <img src="static-qr-code-bdae0f81978943484f3bdd1cc878bbe3.png" alt="" height="300px" class="qrr">
+                  <a href="https://forms.office.com/r/Ah9CyaxNqC">
+                     <div class="register-button">
+                        Scan OR Click Here!
+                     </div>
+                  </a>
+               </div>
+            </div>
+            </div>
          </div>
       </div>
-      <div class="container-5">
-         <div class="contact">
+      <div class="fotter">
+         <div class="fotter-contact">
+            <div class="contact-head">
+               Contact
+            </div>
+            <div class="contact-incharges">
+               <div class="incharges incharges-1">
+                  <div class="incharges-h">
+                     Student Incharges
+                  </div>
+                  <div class="incharges-t">
+                     Ms. Aayesha Gupta<br>
+                     +91 95991 35661<br>
+                     President<br><br><br>
+                     Ms. Shivansh Singh<br>
+                     +91 95601 06673<br>
+                     President
+                  </div>
+               </div>
+               <div class="incharges incharges-2">
+                  <div class="incharges-h">
+                     Teacher Incharges
+                  </div>
+                  <div class="incharges-t">
+                     Mr. Mohit Saras<br>
+                     +91 98913 89128<br>
+                     itfest.mrd@dpsgs.org<br><br><br>
+                     <a href="https://www.instagram.com/dpsg.infinitus/"><i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <a href="https://www.facebook.com/DelhiPublicSchoolGzbMR/"><i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i></a>
+                  </div>
+               </div>
+               <!-- <div class="incharges incharges-3">
+                  <div class="incharges-h">
+                     DPSG
+                  </div>
+                  <div class="incharges-t">
+                     91 0000000
 
+                  </div>
+               </div> -->
+            </div>
          </div>
+         <a href="#top">
+            <div class="top">
+               <i class="fa-solid fa-arrow-up fa-2xl arrow"></i>
+               <br>
+               To the Top
+            </div>
+         </a>
       </div>
+      <!-- <div class="container-5">
+         <div class="contact">
+         </div>
+      </div> -->
       <div id="trailer">
          <i id="trailer-icon" class="fa-solid fa-arrow-up-right"></i>
       </div>
+      <img src="sound.gif" alt="Alt" class="soundbutton" />
+      <audio src="ambient.mp3" class="audio" loop></audio>
       <script src="https://unpkg.com/scrollreveal"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>

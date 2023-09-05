@@ -1,7 +1,7 @@
 const { innerHeight } = window;
 
 // zoom-out
-gsap.from("#main h2 img", {
+gsap.from("#main .entry-animation img", {
     scale: 200, stagger: .20, duration: 5,
     scrollTrigger: {
         trigger: ".container",
@@ -181,6 +181,24 @@ part7.to(".strip-l",{
   x: "30vw",
 }, 'strip')
 
+
+// Audio
+
+let soundButton = document.querySelector('.soundbutton'),
+		audio = document.querySelector('.audio')
+
+soundButton.addEventListener('click', e => {
+	soundButton.classList.toggle('paused')
+	audio.paused ? audio.play() : audio.pause()
+})
+
+window.onfocus = function() {
+	soundButton.classList.contains('paused') ? audio.pause() : audio.play()
+}
+
+window.onblur = function() {
+	audio.pause()
+}
 
 ScrollReveal().reveal('.theme-h', { delay: 200, reset: true});
 ScrollReveal().reveal('.theme-t', { delay: 200, reset: true});
