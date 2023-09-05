@@ -1042,7 +1042,7 @@ a{
         overflow-x: hidden;
     }
 
-    h2 img{
+    .entry-animation img{
       margin-top: 0;
         top: 0;
         width: 130%;
@@ -1089,7 +1089,7 @@ a{
       font-size: 7vw;
     } */
     .prizepool{
-      margin-top: 20%;
+      margin-top: 70%;
     }
     .theme-t{
       font-size: 3.5rem;
@@ -1123,10 +1123,13 @@ a{
       width: 500%;
   } 
   .container-7 h1{
-      font-size: 20vw;
+      font-size: 28vw;
   }
   .vl{
     display: none;
+  }
+  .container-6{
+    margin-top: -30%;
   }
   .register-t{
     font-size: 9vw;
@@ -1151,8 +1154,7 @@ a{
     background-image: none;
   }
   .dpsg{
-    height: 100px;
-    padding-top: 10px;
+    width: 80vw;
   }
   .incharges-h{
     color: gray;
